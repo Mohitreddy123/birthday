@@ -7,12 +7,12 @@ body {
 }
 
 .app {
-  max-width: 800px;
+  max-width: 75%;
   margin: 20px auto;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  background: white;
+  background:white;
 }
 
 .header {
@@ -26,20 +26,41 @@ body {
 
 .content {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   padding: 20px;
 }
 
+@media (min-width: 600px) {
+  .content {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
 .brother-image {
-  width: 200px;
+  width: 120%;
+  max-width: 200px;
   height: auto;
-  border-radius: 50% cover;
-  margin-right: 20px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 600px) {
+  .brother-image {
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
 }
 
 .wishes {
-  text-align: left;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .wishes {
+    text-align: left;
+  }
 }
 
 .footer {
@@ -66,6 +87,7 @@ body {
 .music-button:hover {
   background-color: #45a049;
 }
-img{
+
+img {
   border-radius: 50%;
 }

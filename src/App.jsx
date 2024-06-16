@@ -3,7 +3,7 @@ import "./App.css";
 import image from './image.jpg';
 import BirthdayMusic from "./brother.mp3";
 import Confetti from 'react-confetti';
-import useWindowSize from 'react-use/lib/useWindowSize'
+import useWindowSize from 'react-use/lib/useWindowSize';
 
 const App = () => {
   const { width, height } = useWindowSize();
@@ -12,15 +12,15 @@ const App = () => {
     const audio = new Audio(BirthdayMusic);
     audio.play();
   };
-  useEffect(()=>{
+  useEffect(() => {
     const startConfetti = () => {
       setShowConfetti(true);
       setTimeout(() => {
         setShowConfetti(false);
       }, 6000);
     };
-    startConfetti()
-  },[])
+    startConfetti();
+  }, []);
 
   return (
     <div className="app">
@@ -43,7 +43,7 @@ const App = () => {
           </p>
           <p>Thank you for being an amazing brother!</p>
           <p>With lots of love,</p>
-          <p>Your Name</p>
+          <h4>A.M.R</h4>
         </div>
       </div>
       <footer className="footer">
